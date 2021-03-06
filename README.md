@@ -1,4 +1,6 @@
-# TodoList
+# Todo List
+
+This project is vehicle for demonstrating how to leverage OpenAPI tooling to accelerate the delivery of UI code. With this code, follow the Angular example [HERE](https://appdev.consulting.redhat.com/tracks/contract-first/contract-first-for-ui-development.html).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 
