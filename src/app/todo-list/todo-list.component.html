@@ -1,1 +1,10 @@
-<p>todo-list works!</p>
+<div>
+  <div fxLayout="row" fxLayoutAlign="start start">
+    <div class="header" fxFlex="25%">Title</div>
+    <div class="header" fxFlex="75%">Description</div>
+  </div>
+  <div *ngFor="let todo of todos" fxLayout="row" fxLayoutAlign="start start">
+    <div fxFlex="25%">{{ todo.title }}</div>
+    <div fxFlex="75%">{{ todo.description }}</div>
+  </div>
+</div>
