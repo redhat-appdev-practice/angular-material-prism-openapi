@@ -1,0 +1,46 @@
+---
+openapi: 3.0.2
+info:
+  title: Todo
+  version: 1.0.0
+  description: My Todo list API
+  contact:
+    url: "https://github.com/redhat-appdev-practice"
+    email: deven.phillips@redhat.com
+  license:
+    name: Apache 2.0
+    url: "https://www.apache.org/licenses/LICENSE-2.0"
+servers:
+  - url: "http://{domain}:{port}{base_path}"
+    description: "Todo API URL"
+    variables:
+      base_path:
+        enum:
+          - /
+          - /api/v1
+        default: /
+      domain:
+        enum:
+          - localhost
+          - todo
+          - todo.example.com
+        default: localhost
+      port:
+        enum:
+          - '443'
+          - '80'
+          - '8080'
+          - '7080'
+        default: '7080'
+tags:
+  - name: todos
+paths:
+  /health:
+    get:
+      responses:
+        '200':
+          description: 'OK'
+          content:
+            text/plain:
+              schema:
+                type: string
