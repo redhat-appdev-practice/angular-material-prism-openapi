@@ -4,9 +4,10 @@ This project is vehicle for demonstrating how to leverage OpenAPI tooling to acc
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 
-## Development server
+## Development server with Mock API
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `yarn run watch` for a dev server with a [Prism](https://github.com/stoplightio/prism) mock API server. 
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
