@@ -25,3 +25,9 @@
 .title {
   margin: auto;
 }
+
+.content-area {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}

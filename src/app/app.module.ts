@@ -9,12 +9,18 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatInputModule } from '@angular/material/input'
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { NewTodoComponent } from './new-todo/new-todo.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
+import {ENV, getEnv} from '../environments/environment';
+import {Configuration} from '../sdk';
+import {configFactory} from './apiconfiguration.service';
 
 @NgModule({
   declarations: [
@@ -34,9 +40,16 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatIconModule,
     MatListModule,
     HttpClientModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatInputModule
   ],
-  providers: [],
+  providers: [
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher},
+    {provide: ENV, useFactory: getEnv},
+    {provide: Configuration, useFactory: configFactory, deps: [ENV]}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

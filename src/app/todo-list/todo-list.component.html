@@ -1,7 +1,7 @@
 <div>
-  <div fxLayout="row" fxLayoutAlign="start start">
-    <div class="header" fxFlex="25%">Title</div>
-    <div class="header" fxFlex="75%">Description</div>
+  <div fxLayout="row" fxLayoutAlign="start start" aria-label="table of todo items">
+    <div class="header" fxFlex="25%" aria-label="title header">Title</div>
+    <div class="header" fxFlex="75%" aria-label="description header">Description</div>
   </div>
   <div *ngFor="let todo of todos" fxLayout="row" fxLayoutAlign="start start">
     <div fxFlex="25%">{{ todo.title }}</div>

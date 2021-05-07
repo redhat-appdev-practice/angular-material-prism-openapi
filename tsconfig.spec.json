@@ -1,18 +1,22 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "extends": "./tsconfig.json",
+  "type": "module",
   "compilerOptions": {
+    "type": "module",
     "outDir": "./out-tsc/spec",
     "types": [
-      "jasmine"
-    ]
+      "jasmine",
+      "chai",
+      "mocha"
+    ],
+    "allowSyntheticDefaultImports": true
   },
   "files": [
     "src/test.ts",
     "src/polyfills.ts"
   ],
   "include": [
-    "src/**/*.spec.ts",
-    "src/**/*.d.ts"
+    "features/**/*.steps.ts",
+    "features/**/*.steps.js"
   ]
 }

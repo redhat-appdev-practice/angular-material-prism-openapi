@@ -1,1 +1,11 @@
-<p>new-todo works!</p>
+<div class="newTodoForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput placeholder="Short title here" [(ngModel)]="model.title" name="title">
+  </mat-form-field><br />
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <textarea matInput placeholder="Longer description here" [(ngModel)]="model.description" name="description">{{ model.description }}</textarea>
+  </mat-form-field>
+  <button mat-button (click)="addNewTodo()" name="add">ADD</button>
+</div>

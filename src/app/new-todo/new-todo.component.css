@@ -1,0 +1,14 @@
+.newTodoForm {
+  width: 100%;
+  text-align: right;
+  flex-direction: column;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-button {
+  background-color:#EE0000;
+  margin: 0.4rem;
+}

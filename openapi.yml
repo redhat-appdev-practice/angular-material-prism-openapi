@@ -53,6 +53,8 @@ paths:
     post:
       description: 'Add new Todo'
       operationId: addNewTodo
+      tags:
+        - todos
       requestBody:
         content:
           application/json:
